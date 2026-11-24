@@ -1,0 +1,122 @@
+/* --- Global Styles --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px; /* Mencegah konten tertutup navbar */
+}
+
+/* --- Parallax Hero --- */
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=2070&auto=format&fit=crop');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin-top: 56px;
+}
+
+/* --- Product Cards --- */
+.product-card {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+    background: #fff;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+}
+
+.product-img-wrapper {
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.product-img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.1);
+}
+
+/* --- Utilities --- */
+.text-discount {
+    text-decoration: line-through;
+    color: #adb5bd;
+    font-size: 0.85rem;
+}
+
+.price-text {
+    font-weight: 700;
+    color: #dc3545;
+    font-size: 1.1rem;
+}
+
+.category-card:hover {
+    background-color: #e9ecef;
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+/* --- Custom Navbar --- */
+.navbar {
+    transition: background-color 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.navbar .nav-link.active {
+    color: #0dcaf0 !important;
+    font-weight: bold;
+    border-bottom: 2px solid #0dcaf0;
+}
+
+/* --- Styling Keranjang --- */
+.cart-item-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.qty-input {
+    width: 45px;
+    text-align: center;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 70vh;
+        background-attachment: scroll;
+    }
+    .display-4 {
+        font-size: 2rem;
+    }
+    .product-img-wrapper {
+        height: 140px;
+    }
+}
